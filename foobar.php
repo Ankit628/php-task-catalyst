@@ -6,17 +6,15 @@ for ($i = 1; $i <= 100; $i++) {
     $mod5 = $i % 5;
     switch (true) {
         case ($mod3 == 0 && $mod5 == 0):
-            $arr[] = 'foobar';
+            echo "foobar\n";
             break;
         case ($mod3 == 0):
-            $arr[] = 'foo';
+            echo "foo\n";
             break;
         case ($mod5 == 0):
-            $arr[] = 'bar';
+            echo "bar\n";
             break;
         default:
-            $arr[] = $i;
+            echo "$i\n";
     }
 }
-
-print_r($arr);
