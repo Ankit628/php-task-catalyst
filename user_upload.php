@@ -42,11 +42,6 @@ if (($handle = fopen($csv_file, "r")) !== FALSE) {
             $row++;
             continue;
         }
-        // Validate email address
-        if (!filter_var($data[2], FILTER_VALIDATE_EMAIL)) {
-            echo "Invalid email format: " . $data[2] . "\n";
-            continue;
-        }
         // Capitalize name and surname, and lowercase email
         $name = ucwords(strtolower($data[0]));
         $surname = ucwords(strtolower($data[1]));
